@@ -1,0 +1,39 @@
+{
+  "productos": [
+    {
+      "id": 3,
+      "nombre": "Iphone X",
+      "precio": "3000000"
+    },
+    {
+      "id": 4,
+      "nombre": "MacBook",
+      "precio": "4000000"
+    },
+    {
+      "id": 5,
+      "nombre": "Samsung J7",
+      "precio": "1000000"
+    },
+    {
+      "id": 6,
+      "nombre": "Teclado",
+      "precio": "20000"
+    },
+    {
+      "id": 7,
+      "nombre": "Mouse",
+      "precio": "7000"
+    },
+    {
+      "id": 8,
+      "nombre": "Bateria Mac",
+      "precio": "350000"
+    },
+    {
+      "id": 9,
+      "nombre": "Auriculares",
+      "precio": "20000"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ import {mostrarProductos} from '../actions/ProductosAction'
             })[0]
         }
         
-        console.log('producto encontrado',producto)
+        //console.log('producto encontrado',producto)
 
         return (
             <div className="container">
@@ -43,25 +43,30 @@ import {mostrarProductos} from '../actions/ProductosAction'
                             <input ref={precio} type="number" className="form-control" placeholder={producto.precio} />
                         </div>
                         <Link to="/"><button type="button" className="btn btn-info mr-3"  onClick={
-                            ()=>{
+                            async ()=>{
                                 
                                 const producto = {
                                     id: Date.now(),
                                     nombre : nombre.current.value,
                                     precio : precio.current.value
                                 }
-                                this.props.editarProducto(producto,this.props.id)
+                                console.log('antes de editar')
+                                await this.props.editarProducto(producto,this.props.id)
+                                console.log('despues de editar')
+                                console.log(this.props)
                                 
                                 
                             }
                         }>Actualizar</button>
                         </Link>
-                        <Link to="/"><button type="button" className="btn btn-danger" onClick={
+                        <Link to="/"><button type="button" className="btn btn-danger mr-3" onClick={
                             ()=>{
                                 console.log('eliminar a',producto.id)
                                 this.props.eliminarProducto(producto.id)
                             }
                         }>Eliminar </button>
+                        </Link>
+                        <Link to="/"><button type="button" className="btn btn-warning" >Volver </button>
                         </Link>
                     </form>
                     

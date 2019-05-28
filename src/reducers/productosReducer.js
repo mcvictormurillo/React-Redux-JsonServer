@@ -7,14 +7,14 @@ const estadoInicial = {
 export default function (state = estadoInicial, action){
     switch(action.type){
         case MOSTRAR_PRODUCTOS:
-            console.log(action.payload)
+            //console.log(action.payload)
             return {...state,productos:action.payload};
 
         case ELIMINAR_PRODUCTOS:
          console.log('cantidad de productos antes: ',state.productos.length)
             const nuevoEstado = state.productos.filter((item)=>{
                 if(item.id!=action.payload){
-                    console.log(`Encontrado ${item.id} y payload ${action.payload} y nombre: ${item.nombre} `)
+                    //console.log(`Encontrado ${item.id} y payload ${action.payload} y nombre: ${item.nombre} `)
                     return item
                 }
             })
@@ -34,7 +34,7 @@ export default function (state = estadoInicial, action){
                 }
                 return item
             })
-            console.log('estado despues de editar',newEstado)
+            //console.log('estado despues de editar',newEstado)
             return {...state, productos: newEstado}
      
         case CREAR_PRODUCTOS:
